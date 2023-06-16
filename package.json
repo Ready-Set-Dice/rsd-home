@@ -1,0 +1,33 @@
+{
+  "name": "homepage",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build-linux": "vue-cli-service build",
+    "postbuild-linux": "rm -rf ../homepage-prod/dist ; cp -r ./dist ../homepage-prod/. ; pm2 restart homepage",
+    "build-windows": "vue-cli-service build",
+    "postbuild-windows": "rmdir F:\\rsd\\homepage-prod\\dist /s && xcopy F:\\rsd\\homepage\\dist F:\\rsd\\homepage-prod\\dist /E /H /C /I",
+    "build-pipeline": "vue-cli-service build"
+  },
+  "dependencies": {
+    "less-loader": "^11.1.0",
+    "npm": "^8.12.0",
+    "vue": "^2.6.11",
+    "vue-meta": "^2.4.0",
+    "vue-router": "^3.2.0",
+    "vuetify": "^2.4.0",
+    "vuex": "^3.4.0",
+    "vuex-persistedstate": "^4.1.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-router": "^5.0.4",
+    "@vue/cli-plugin-vuex": "^5.0.4",
+    "@vue/cli-service": "^5.0.4",
+    "sass": "~1.32.0",
+    "sass-loader": "^10.0.0",
+    "vue-cli-plugin-vuetify": "^2.5.1",
+    "vue-template-compiler": "^2.6.11",
+    "vuetify-loader": "^1.7.0"
+  }
+}
