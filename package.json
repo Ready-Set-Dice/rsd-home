@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
+    "prebuild": "rm -rf ./dist",
+    "build": "vue-cli-service build",
     "build-linux": "vue-cli-service build",
     "postbuild-linux": "rm -rf ../homepage-prod/dist ; cp -r ./dist ../homepage-prod/. ; pm2 restart homepage",
     "build-windows": "vue-cli-service build",
@@ -11,6 +13,7 @@
     "build-pipeline": "vue-cli-service build"
   },
   "dependencies": {
+    "express": "^4.18.2",
     "less-loader": "^11.1.0",
     "npm": "^8.12.0",
     "vue": "^2.6.11",
