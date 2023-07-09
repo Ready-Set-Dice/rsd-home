@@ -33,5 +33,7 @@ jobs:
           username: ${{ secrets.DEPLOY_USER }}
           key: ${{ secrets.GITSERVICE_ED_SSH }}
           port: ${{ secrets.DEPLOY_PORT }}
-          script: whoami
-      
+          script_stop: true
+          script: |
+            git -C rsd/rsd-shared pull
+            git -C rsd/rsd-home pull

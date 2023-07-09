@@ -5,14 +5,13 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "prebuild": "rm -rf ./dist",
+    "prebuild-linux": "ln -s ./../../rsd-shared src/.shared",
     "build": "vue-cli-service build",
     "build-linux": "vue-cli-service build",
-    "postbuild-linux": "rm -rf ../homepage-prod/dist ; cp -r ./dist ../homepage-prod/. ; pm2 restart homepage",
+    "postbuild-linux": "pm2 restart homepage",
     "build-windows": "vue-cli-service build",
     "postbuild-windows": "rmdir F:\\rsd\\homepage-prod\\dist /s && xcopy F:\\rsd\\homepage\\dist F:\\rsd\\homepage-prod\\dist /E /H /C /I",
     "build-pipeline": "vue-cli-service build",
-    "setup": "ln -s ./../../rsd-shared src/.shared",
-    "run": "pm2 start homepage.js"
   },
   "dependencies": {
     "express": "^4.18.2",
