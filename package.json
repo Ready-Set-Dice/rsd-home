@@ -11,7 +11,7 @@
     "postbuild-linux": "pm2 restart homepage",
     "build-windows": "vue-cli-service build",
     "postbuild-windows": "rmdir F:\\rsd\\homepage-prod\\dist /s && xcopy F:\\rsd\\homepage\\dist F:\\rsd\\homepage-prod\\dist /E /H /C /I",
-    "build-pipeline": "vue-cli-service build",
+    "build-pipeline": "vue-cli-service build"
   },
   "dependencies": {
     "express": "^4.18.2",
