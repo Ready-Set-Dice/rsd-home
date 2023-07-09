@@ -98,7 +98,7 @@
 
 <script>
 import router from './router'
-import NavigationDrawerNoAuth from '@/../../shared/components/layout/NavigationDrawerNoAuth'
+import NavigationDrawerNoAuth from '@/.shared/components/layout/NavigationDrawerNoAuth'
 
 export default {
   components: {

@@ -2,9 +2,9 @@ import Vue from 'vue'
 import VueMeta from 'vue-meta'
 import App from './App.vue'
 import store from '@/store'
-import vuetify from '@/../../shared/plugins/vuetify'
+import vuetify from '@/.shared/plugins/vuetify'
 
-import BreakpointMixin from '@/../../shared/plugins/BreakpointMixin'
+import BreakpointMixin from '@/.shared/plugins/BreakpointMixin'
 import { mapState } from 'vuex'
 
 import router from './router'
