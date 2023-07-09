@@ -8,18 +8,14 @@ on:
       - dev
 
 jobs:
-  shared-code-setup:
+  install-and-build:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
       - uses: actions/checkout@v3
         with:
           repository: Ready-Set-Dice/rsd-shared.git
           path: './src/.shared'
-  install-and-build:
-    runs-on: ubuntu-latest
-    needs: shared-code-setup
-    steps:
-      - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: '18.2'
