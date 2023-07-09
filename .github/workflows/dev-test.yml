@@ -20,5 +20,5 @@ jobs:
         with:
           node-version: '18.2'
       - run: npm ci
-      # We would like to run some tests here maybe
       - run: npm run build --if-present
+      # We would like to run some tests here maybe
