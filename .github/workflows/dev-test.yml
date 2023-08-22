@@ -29,7 +29,7 @@ jobs:
       - name: archive production artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: dist-without-markdown
+          name: dist-and-server
           path: |
             dist
             homepage.js
