@@ -14,7 +14,9 @@
     "build-pipeline": "vue-cli-service build"
   },
   "dependencies": {
-    "express": "^4.18.2",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
     "less-loader": "^11.1.0",
     "npm": "^8.12.0",
     "vue": "^2.6.11",
@@ -22,9 +24,7 @@
     "vue-router": "^3.2.0",
     "vuetify": "^2.4.0",
     "vuex": "^3.4.0",
-    "vuex-persistedstate": "^4.1.0"
-  },
-  "devDependencies": {
+    "vuex-persistedstate": "^4.1.0",
     "@vue/cli-plugin-router": "^5.0.4",
     "@vue/cli-plugin-vuex": "^5.0.4",
     "@vue/cli-service": "^5.0.4",
