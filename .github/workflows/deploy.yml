@@ -47,6 +47,7 @@ jobs:
           port: ${{ secrets.DEPLOY_PORT }}
           script: |
             pm2 stop homepage
+            pm2 delete homepage
             rm -rf ~/rsd/homepage
   deploy-job:
     runs-on: ubuntu-latest
@@ -78,4 +79,5 @@ jobs:
           script: |
             cd ~/rsd/homepage
             npm install --omit=dev
-            pm2 restart homepage
+            pm2 start homepage.js
+            pm2 save
