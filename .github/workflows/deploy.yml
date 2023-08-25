@@ -77,5 +77,5 @@ jobs:
           port: ${{ secrets.DEPLOY_PORT }}
           script: |
             cd ~/rsd/homepage
-            npm install
+            npm install --omit=dev
             pm2 restart homepage
