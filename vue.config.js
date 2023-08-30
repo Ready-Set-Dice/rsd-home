@@ -1,3 +1,4 @@
+const path = require('path')
 module.exports = {
   productionSourceMap: false,
   transpileDependencies: [
@@ -5,5 +6,13 @@ module.exports = {
   ],
   devServer: {
     port: 8080,
-  }
+  },
+  configureWebpack: {
+    resolve: {
+      alias: {
+        src: path.resolve(__dirname, 'src'),
+        '@root': path.resolve(__dirname, '.')
+      }
+    }
+  },
 }
